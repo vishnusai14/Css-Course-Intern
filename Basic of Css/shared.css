@@ -1,0 +1,258 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  display: grid;
+  grid-template-rows: 20px 103% 40px;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+main {
+  grid-area: main;
+}
+
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #2ddf5c;
+  padding: 8px 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 60px;
+  grid-area: header;
+}
+
+.main-nav__items {
+  text-align: right;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav__item {
+  /* Behaves as Inline element but it will also have ability to set margin and padding */
+
+  margin: 20px;
+}
+
+.main-nav {
+  /* Makign the element to be in 100% but leaving the header width */
+  /* width: calc(100% - 92px); */
+  display: none;
+}
+.main-header__name {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.main-header__brand {
+  text-decoration: none;
+  color: #0e4f1f;
+  font-family: inherit;
+  font-weight: bold;
+}
+
+.main-header__brand > img {
+  margin-top: 0.5rem;
+  vertical-align: middle;
+  height: 2rem;
+}
+
+.mobile-nav {
+  /* display: none; */
+  opacity: 0;
+  transform: translateX(-25rem);
+  transition: opacity 0.2s linear, transform 0.5s linear;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80%;
+  background-color: white;
+  height: 100vh;
+  z-index: 4000;
+}
+
+.open-mobile-nav {
+  opacity: 1 !important;
+  transform: translateX(0rem);
+}
+
+.main-nav__link,
+.mobile-nav__link {
+  text-decoration: none;
+  color: #0e4f1f;
+  font-weight: bold;
+  padding-bottom: 3px;
+}
+
+/* .main-nav__link::after {
+    content: " (Link) ";
+    color: red;
+  } */
+
+/* Pseduo Classes */
+.main-nav__link:active,
+.main-nav__link:hover {
+  color: whitesmoke;
+  border-bottom: 1px solid white;
+}
+
+.mobile-nav__link:hover,
+.mobile-nav__link:active {
+  color: #0e4f1f;
+  border-bottom: 1px solid #0e4f1f;
+}
+
+.mobile-nav__items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  height: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 10px auto;
+  text-align: center;
+}
+.mobile-nav__item {
+  margin: 1rem 0;
+}
+
+.mobile-nav__link {
+  font-size: 1.5rem;
+}
+
+.main-nav__item--cta {
+  animation: wiggle 0.2s linear 3s 8 alternate;
+}
+
+.main-nav__item--cta a,
+.mobile-nav__item--cta a {
+  color: white;
+  background: #ff1b68;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.main-nav__item--cta a:hover,
+.main-nav__item--cta a:active,
+.mobile-nav__item--cta a:active,
+.mobile-nav__item--cta a:hover {
+  color: #ff1b68;
+  background-color: white;
+  border: 0;
+}
+
+.main-footer {
+  background-color: black;
+  color: white;
+  margin-top: 50px;
+  padding: 32px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 20px;
+  right: 0;
+  width: 100%;
+  z-index: 800;
+  grid-area: footer;
+}
+
+.main-footer__lists {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.main-footer__list {
+  margin: 0 60px;
+}
+
+.main-footer__list > a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.main-footer__list > a:hover,
+.main-footer > a:active {
+  color: #ccc;
+}
+
+.backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  /* vmax => takes the defined vale in percetage of max viewport distance and vmin as vice versa */
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.toggle__button {
+  width: 3rem;
+  border: none;
+  cursor: pointer;
+  vertical-align: middle;
+  background-color: transparent;
+  margin-top: 0.6rem;
+}
+
+.toggle__button--bar {
+  width: 100%;
+  height: 0.1rem;
+  background-color: black;
+  display: block;
+  margin: 0.3rem 0;
+}
+
+.open {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+@media (min-width: 40rem) {
+  .main-header {
+    height: 70px;
+  }
+  .main-nav {
+    display: inline-block;
+  }
+  .toggle__button {
+    display: none;
+  }
+  .main-header__brand > img {
+    margin-top: 0;
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(-10deg);
+  }
+  100% {
+    transform: rotateZ(10deg);
+  }
+}

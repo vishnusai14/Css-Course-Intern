@@ -1,0 +1,47 @@
+.container {
+  margin: 20px;
+  display: grid;
+  /* //Adding Multiple Columns */
+  /* This will add four columns with 200px each */
+  /* repeat(how-many-time-to-repeat, what is the size) */
+  grid-template-columns: repeat(4, 200px);
+  /* grid-template-columns: 200px 200px 200px 200px; */
+  /* this will add two rows */
+  /* naming our rows */
+  grid-template-rows: [row-1-start] 5rem [row-1-end row-2-start] 2rem [row-2-end];
+  /* grid-row-gap:  gives gap between row; */
+  /* grid-column-gap: gives gap between column; */
+  /* position the element along row */
+  justify-items: stretch;
+  /* aling the item along the column */
+  align-items: center;
+
+  /* to align the entire grig use justify-content: and align-content: ;; */
+}
+
+.el1 {
+  background: rgba(255, 154, 72, 0.5);
+  /* shorthand */
+  /* grid-column: start / end; */
+  /* grid-area: grid-row-start / grid-column-start / gird-row-end / gird-column-end; */
+  grid-row-start: row-1-start;
+  grid-row-end: row-2-end;
+}
+.el2 {
+  background: rgba(255, 0, 0, 0.5);
+}
+
+.el3 {
+  background: rgba(0, 128, 0, 0.5);
+  /* this will make the element 3 to span the widht of two cells */
+  /* el3 start with the line 3 and end by 4 by default but now we change the end to 5 so this will make the al3 to take two cells and move whatever inside the 4 cells to the next row */
+  grid-column-start: 3;
+  /* grid-column-end: 5; */
+  /* this is equivalent  */
+  /* this will span 2 cells  */
+  grid-column-end: span 2;
+}
+
+.el4 {
+  background: rgba(0, 4, 255, 0.5);
+}

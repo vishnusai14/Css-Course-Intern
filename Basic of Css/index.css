@@ -1,0 +1,321 @@
+/* p tage will take the style from the body and can be overrided also */
+
+.main-section {
+  width: 100%;
+  /* height: 600px; */
+}
+
+#product-overview {
+  /* adding image; */
+  background-image: linear-gradient(rgba(80, 68, 18, 0.6), transparent),
+    url("./images/freedom.jpg");
+  /* background-size: width height; */
+  /* if height is not given then it will take the aspect ratio; */
+  /* if we set the height to auto then it will be cropped to the container height */
+  /* value for background-size; */
+  /* => cover  => make sure it is cover the entire parent */
+  /* => contain ; => it will the contain the image  */
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-image: radial-gradient(circle, red, blue); */
+  /* background-position: x-axis shift from left y axis shift from top ; */
+  /* background-position: 20px 20px; */
+  /* percentage works different with background postion  */
+  /* background-position: 10% 10%; */
+  /* This means the portion of the image that is not fitted crop 10% rom left and 10% from top */
+  /* we can also specify which side we want to crop */
+  background-position: left 10% top 30%;
+  /* this says cop 10% from left and 10 % from bottom  */
+  padding: 20px;
+  /* shorthand property */
+  /* border: 5px dashed black; */
+  /* ==>  */
+  /* border-width: 5px;
+  border-style: solid;
+  /* border-color: black; */
+  margin: 5.6rem auto;
+  /* =>
+  margin-top : 20px;
+  margin-bottom: 20px;
+  margin-left : 20px;
+  margin-right : 20px */
+
+  /* margin : top right bottom left
+  margin : top&bottom right&left */
+  /* Same applies to padding */
+
+  /* tell the section to take 50 % of the parent width ie : main  */
+  /* Block level element always take 100 % */
+  width: 95vw;
+  /* Same applies to height */
+
+  height: 40vh;
+  position: relative;
+  /* border box refers the width and height that we gie includes the amount for margin + padding + border */
+}
+
+#product-overview > h1 {
+  position: absolute;
+  /* bottom: 50px; */
+  bottom: 10%;
+  margin: 0;
+  padding: 0;
+}
+
+.section-title {
+  color: #2ddf5c;
+  margin: 0.6rem auto;
+  text-align: center;
+}
+
+/* Combinators */
+
+#product-overview h1 {
+  font-size: 1.6rem;
+  color: whitesmoke;
+}
+
+/* media query */
+
+/* whenever the width is 50rem or larger this css will apply */
+
+/* whenever the widht is 50 rem and smaller this css will be applied */
+
+/* @media(max-width : 50rem) */
+
+/* Adjacent Siblings */
+
+/* h2 + p => p tag inmmediately after h2 will be selected  */
+
+/* General Siblings */
+
+/* h2 ~ p => select all the p after h2  */
+
+/* Child  */
+
+/* div > p => p that comes after div on the same level */
+
+/* Descendant */
+
+/* div p => all p after div */
+
+/* Priroity : 
+1.Inline Styling
+2.Stying with id
+3.Stying tih class, pseudo-class, attribute
+
+4.Styling with tag name
+5.Browser default styling */
+
+.plan-lists {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.plan {
+  background-color: #d5ffdc;
+  /* display: block; */
+  text-align: center;
+  padding: 1rem;
+  margin: 1.1rem auto;
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+}
+
+.recommned-plan {
+  background-color: #2ddf5c;
+  color: whitesmoke;
+  /* Box shadow allows to create a shadow aronund a box */
+  /* x y bluriness spread color */
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.plan__feature {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.plan__feature li {
+  margin: 0.5rem 0;
+}
+
+.plan__annotation {
+  background-color: white;
+  color: #2ddf5c;
+  padding: 0.3rem;
+  width: 150px;
+  text-align: center;
+  margin: auto auto;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+
+.plan__title {
+  color: #0e4f1f;
+}
+
+.plan__price {
+  color: #858885;
+}
+
+.recommned-plan .plan__title {
+  color: whitesmoke;
+}
+
+.recommned-plan .plan__price {
+  color: #0e4f1f;
+}
+
+.plan__button {
+  background-color: #0e4f1f;
+  color: white;
+  /* font is a shorthand property */
+  font: inherit;
+  border: none;
+  margin: 0.5rem;
+  padding: 0.7rem;
+  border-radius: 10px;
+  font-weight: bold;
+  border: 2px solid black;
+}
+
+.plan__button:hover,
+.plan__button:active {
+  cursor: pointer;
+  color: #0e4f1f;
+  background-color: white;
+  border: 2px solid black;
+}
+
+.plan__button:focus {
+  outline: none;
+}
+
+#section-feature {
+  background-color: #ff1b68;
+  color: whitesmoke;
+  margin-left: 1.3rem;
+  margin-right: 1.3rem;
+}
+
+.feature__title {
+  text-align: center;
+  margin: 1.3rem;
+  padding: 1.8rem;
+}
+
+.feature__lists {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.feature__list--item {
+  background-color: pink;
+  border: 1px solid black;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  text-align: center;
+  margin: auto;
+  padding: 1.3rem;
+}
+
+.feature__list {
+  /* display: inline-block; */
+  margin: 0.6rem auto;
+  width: 50%;
+}
+
+.feature__list--text {
+  text-align: center;
+  font-weight: bold;
+}
+
+.modal {
+  opacity: 0;
+  transform: translateY(-3rem);
+  /* transition: property-to-watch(have more than one value) duration   */
+  transition: opacity 0.5s, transform 0.2s;
+  position: fixed;
+  top: 20%;
+  left: 30%;
+  z-index: 2000;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 20px;
+  width: 40%;
+}
+
+.modal__title {
+  text-align: center;
+}
+
+.modal__actions {
+  text-align: center;
+}
+
+.modal__action {
+  background-color: #0e4f1f;
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: 1px solid #0e4f1f;
+  font: inherit;
+  cursor: pointer;
+}
+
+.modal__action:hover,
+.modal__action:active {
+  background-color: #2ddf5c;
+}
+
+.modal__action--negative:hover,
+.modal__action--negative:active,
+.modal__action--negative {
+  background-color: #ff1b68;
+}
+
+@media (min-width: 48rem) {
+  #product-overview {
+    height: 70vh;
+  }
+  #product-overview h1 {
+    font-size: 2.5rem;
+  }
+  .plan {
+    width: 30%;
+    margin: 1rem;
+  }
+  .plan-lists {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .plan__annotation {
+    width: 50%;
+  }
+  .feature__lists {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* 68 > width > 49 */
+
+@media (min-width: 47rem) and (max-width: 73rem) {
+  .plan__annotation {
+    width: 150px;
+  }
+}

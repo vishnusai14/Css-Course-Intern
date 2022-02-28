@@ -1,0 +1,10 @@
+position : static => Default Positioning
+
+position => absolute, relative, fixed, sticky; 
+
+position property : 
+    top , left, bottom, right
+
+    top : 20 px => Take the current position and move it up by 20px
+
+    top : 20px => Top px from some reference content (html, body)

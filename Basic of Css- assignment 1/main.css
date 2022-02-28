@@ -1,0 +1,31 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+li {
+  font-family: inherit;
+}
+
+li + li {
+  background-color: black;
+  color: white;
+}
+
+ol li {
+  background-color: black;
+  color: white;
+}
+
+#assignment-instructions {
+  color: slategrey;
+  font-family: sans-serif;
+}
+
+code {
+  font-family: monospace;
+  color: red;
+}
+
+.second-li code {
+  color: green;
+}

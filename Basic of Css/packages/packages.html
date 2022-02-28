@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@1,700&family=Poppins:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../shared.css" />
+    <link rel="stylesheet" href="packages.css" />
+    <link rel="icon" href="../images/favicon.png" />
+    <title>Packages</title>
+</head>
+
+<body>
+    <div onclick="backdropClick()" class="backdrop" id="backdrop"></div>
+    <div class="background"></div>
+    <header class="main-header">
+        <div class="main-header__name">
+            <button onclick="toggleMobileNav()" class="toggle__button">
+                <span class="toggle__button--bar"></span>
+                <span class="toggle__button--bar"></span>
+                <span class="toggle__button--bar"></span>
+            </button>
+            <a href="../index.html" class="main-header__brand">
+                <img src="../images/uhost-icon.png" alt="uHost - Your Favourite Styling">
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul class="main-nav__items">
+                <li class="main-nav__item">
+                    <a class="main-nav__link" href="./packages/packages.html">Packages</a>
+                </li>
+
+                <li class="main-nav__item">
+                    <a class="main-nav__link" href="../customers/customers.html">Customer</a>
+                </li>
+
+                <li class="main-nav__item main-nav__item--cta">
+                    <a class="main-nav__link" href="../start-hosting/start-hosting.html">Start Hosting</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <nav id="mobile-nav" class="mobile-nav">
+        <ul class="mobile-nav__items">
+            <li class="mobile-nav__item">
+                <a class="mobile-nav__link" href="packages/packages.html">Packages</a>
+            </li>
+            <li class="mobile-nav__item">
+                <a class="mobile-nav__link" href="../customers/customers.html">Customers</a>
+            </li>
+            <li class="mobile-nav__item mobile-nav__item--cta">
+                <a class="mobile-nav__link" href="start-hosting/start-hosting.html">Start Hosting</a>
+            </li>
+        </ul>
+    </nav>
+    <main class="main">
+        <section class="plan-feature plan-feature__plus">
+            <h2 class="plan-feature__plus--title">RECOMMENDED</h2>
+            <a href="#">
+                <h1 class="plan-feature__title">Our PLUS Plan</h1>
+                <h2 class="plan-feature__quote">The most popular choice of our customers.</h2>
+                <p class="plan-feature__desc">Benefit from increased storage and faster support to ensure that your
+                    mission-critical data and
+                    applications
+                    are always available!</p>
+            </a>
+        </section>
+        <section class="plan-feature plan-feature__middle">
+            <a href="#">
+                <h1 class="plan-feature__title">Our FREE Plan</h1>
+                <h2 class="plan-feature__quote">An extremely solid start into our hosting world.</h2>
+                <p class="plan-feature__desc">Get started immediately at zero cost!</p>
+            </a>
+        </section>
+        <!-- only to get away the issue causing by float -->
+        <div class="clearfix"></div>
+        <section class="plan-feature plan-feature__recommend">
+            <a href="#">
+                <h1 class="plan-feature__title plan-feature__recommend-title">Our PREMIUM Plan</h1>
+                <h2 class="plan-feature__quote plan-feature__recommend-quote">All your enterprise needs. Instant
+                    support, guaranteed uptime. </h2>
+                <p class="plan-feature__desc plan-feature__recommend-desc">The best solution for small to large
+                    enterprises. Because hosting
+                    shouldn't be in the way!</p>
+            </a>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <nav class="main-footer__nav">
+            <ul class="main-footer__lists">
+                <li class="main-footer__list">
+                    <a href="#">Support</a>
+                </li>
+                <li class="main-footer__list">
+                    <a href="#">Terms of Use</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+    <script src="../shared.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+.grid-container {
+  height: 100vh;
+  display: grid;
+  background-color: #ccc;
+  grid-template-columns: [column-1-start] 30% [column-1-end column-2-start] 70% [column-2-end];
+  grid-template-rows: [row-1-start] 20% [row-1-end row-2-start] 80% [row-2-end row-3-start] 20% [row-3-end];
+
+  /* //Create our Table */
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+}
+
+@media (max-width: 40rem) {
+  .grid-container {
+    grid-template-columns: [column-1-start] 100% [column-1-end];
+    grid-template-rows: [row-1-start] 20% [row-1-end row-2-start] 30%[row-2-end row-3-start] 80% [row-3-end row-4-start] 20% [row-4-end];
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "main"
+      "footer";
+  }
+}
+
+.child {
+  text-align: center;
+  padding: 2rem;
+  margin: 0.5rem;
+  background-color: rgb(70, 68, 68);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  /* grid-column-start: column-1-start;
+  grid-column-end: column-2-end; */
+  grid-area: header;
+}
+
+.footer {
+  /* grid-column-start: column-1-start;
+  grid-column-end: column-2-end; */
+  grid-area: footer;
+}
+
+.main-content {
+  grid-area: main;
+}
+
+.side-bar {
+  grid-area: sidebar;
+  /* height: 500px; */
+}

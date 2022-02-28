@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+html {
+  background: #b3b3b3;
+  padding: 5px;
+}
+
+body {
+  background: #b3b3b3;
+  padding: 5px;
+  margin: 0;
+}
+
+.flex-container {
+  background: white;
+  padding: 10px;
+  border: 5px solid black;
+  display: flex;
+  height: 800px;
+  /* //flex-direction => row by default */
+  /* flex-wrap: => by default nowrap; */
+  flex-direction: row;
+  flex-wrap: nowrap;
+  /* wrap will automatically move the element to next row depending on the flex container size and use the height needed to display the content */
+
+  /* for row : 
+    main-axis : top left - right;
+    cross-axis : top-left - bottom
+  for column :
+    main-axis : top left - bottom;
+    cross-axis : top left - right
+  for row-revers : 
+    main-axis : top right - left;
+    cross-axis : top right - bottom
+  for column-reverse: 
+    main-axis : bottom-left - top;
+    cross-axis : bottom-left - right;
+
+  align-items will the align the item based on cross axis ; */
+  align-items: center;
+  /* justify-content will the align the item based on main axis ; */
+  justify-content: flex-start;
+
+  /* align-content: center; */
+}
+
+.item-1 {
+  background: #ff7300;
+  color: white;
+  padding: 10px;
+  border: 5px solid black;
+  margin: 10px;
+}
+
+.item-2 {
+  background: #ff9640;
+  color: white;
+  padding: 10px;
+  border: 5px solid black;
+  margin: 10px;
+  width: 250px;
+  font-size: 1.8rem;
+}
+
+.item-3 {
+  background: #ff9640;
+  color: white;
+  padding: 10px;
+  border: 5px solid black;
+  margin: 10px;
+  height: 250px;
+  /* //align-self will align the individual item in cross axis */
+  align-self: flex-end;
+}
+
+.item-4 {
+  background: #f5c096;
+  color: white;
+  padding: 10px;
+  border: 5px solid black;
+  margin: 10px;
+  width: 300px;
+  height: 300px;
+  /* order : => positive : move to right ; 0 => default position negative : move to left */
+  /* order: -1; */
+}
+
+/* flex-grow => will increase the width based on the remaining size and the number we give */
+
+/* flex-basis will set the width if we have flex-direction as row or row-reverse or it will set height if we have flex-direction as column or column-reverse */
+
+.item-5 {
+  background: #d3c0b1;
+  color: white;
+  padding: 10px;
+  border: 5px solid black;
+  margin: 10px;
+  width: 100px;
+  flex-grow: 1;
+}
+
+.item-6 {
+  background: #d3c0b1;
+  color: white;
+  padding: 2px;
+  border: 5px solid black;
+  margin: 10px;
+  width: 100px;
+  flex-grow: 4;
+}

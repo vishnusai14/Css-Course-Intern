@@ -1,0 +1,133 @@
+.main {
+  margin-top: 79px;
+}
+
+.plan-feature {
+  background-color: #d5ffdc;
+  padding: 3.2rem;
+  margin: 4rem 0rem;
+  width: 80%;
+  border: 3px solid #0e4f1f;
+}
+
+.plan-feature:nth-of-type(1):hover,
+.plan-feature:nth-of-type(3):hover {
+  animation: move-right 0.5s linear;
+}
+
+.plan-feature:nth-of-type(2):hover {
+  animation: move-left 0.5s linear;
+}
+
+.plan-feature__recommend {
+  background-color: #0e4f1f;
+  border: 3px solid black;
+}
+
+.plan-feature:hover,
+.plan-feature:active {
+  border: 3px solid red;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.plan-feature > a {
+  text-decoration: none;
+  color: black;
+}
+
+.plan-feature__title {
+  font-weight: bold;
+}
+
+.plan-feature__recommend-title {
+  color: whitesmoke;
+}
+
+.plan-feature__quote {
+  color: rgb(151, 151, 151);
+}
+
+.plan-feature__desc {
+  background-color: whitesmoke;
+  padding: 1.3rem;
+  border: 1px solid black;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.plan-feature__middle {
+  text-align: right;
+  float: right;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.background {
+  background-image: url("../images/");
+  background-position: center;
+  filter: grayscale(40%);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1000;
+}
+
+.plan-feature__plus {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.plan-feature__plus--title {
+  /* position => absolute  */
+  /* makes the element relative to postion : relative */
+  /* if non of the parent element is relative then it is realtive to the HTML element */
+  position: absolute;
+  top: 17px;
+  right: 40px;
+  font-size: 0.7rem;
+  color: white;
+  background-color: #ff1b68;
+  /* border-radius: 50px; */
+  width: 30rem;
+  text-align: center;
+  padding: 0.6rem;
+  z-index: 10;
+  /* this is will rotate by 45 deg by center */
+  /* translateX will move the element by 20 px to right */
+  /* translateY will move the element by 20 px to bottom */
+  transform: rotateZ(45deg) translateX(10rem) translateY(-10rem);
+  /* to roatate along any other side use transform-origin */
+}
+
+@media (min-width: 40rem) {
+  .plan-feature__plus--title {
+    font-size: 1rem;
+    transform: rotateZ(45deg) translateX(10rem) translateY(-7rem);
+  }
+}
+
+@keyframes move-right {
+  0% {
+    transform: translateX(0rem);
+  }
+  50% {
+    transform: translateX(3rem);
+  }
+  100% {
+    transform: translateX(0rem);
+  }
+}
+
+@keyframes move-left {
+  0% {
+    transform: translateX(initial);
+  }
+  50% {
+    transform: translateX(-3rem);
+  }
+  100% {
+    transform: translateX(initial);
+  }
+}
